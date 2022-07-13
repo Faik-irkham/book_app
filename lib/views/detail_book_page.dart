@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:book_app/controllers/book_controller.dart';
 import 'package:book_app/views/image_view_screen.dart';
 // ignore: implementation_imports
@@ -58,19 +56,19 @@ class _DetailBookPageState extends State<DetailBookPage> {
                   Expanded(
                     flex: 3,
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 25, vertical: 25),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 25, vertical: 25),
                       decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.8),
                             blurRadius: 20.0,
                             spreadRadius: 0.0,
-                            offset: Offset(1.0, 0.0),
+                            offset: const Offset(1.0, 0.0),
                           ),
                         ],
                         color: Colors.white,
-                        borderRadius: BorderRadius.vertical(
+                        borderRadius: const BorderRadius.vertical(
                           top: Radius.circular(30),
                         ),
                       ),
@@ -124,32 +122,32 @@ class _DetailBookPageState extends State<DetailBookPage> {
                           //     color: Colors.green,
                           //   ),
                           // ),
-                          SizedBox(
+                          const SizedBox(
                             height: 12,
                           ),
-                          Text(
+                          const Text(
                             "Description",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 6,
                           ),
                           Text(controller.detailBook!.desc!),
 
                           Container(
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                               top: 10,
                             ),
                             height: 60,
-                            padding: EdgeInsets.symmetric(
+                            padding: const EdgeInsets.symmetric(
                               horizontal: 20,
                               vertical: 12,
                             ),
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(245, 245, 245, 245),
+                              color: const Color.fromARGB(245, 245, 245, 245),
                               borderRadius: BorderRadius.circular(9),
                             ),
                             child: Row(
@@ -158,38 +156,38 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               children: [
                                 Column(
                                   children: [
-                                    Text("Year"),
-                                    SizedBox(
+                                    const Text("Year"),
+                                    const SizedBox(
                                       height: 2,
                                     ),
-                                    Text("${controller.detailBook!.year!}"),
+                                    Text(controller.detailBook!.year!),
                                   ],
                                 ),
-                                VerticalDivider(
+                                const VerticalDivider(
                                   color: Colors.black,
                                   thickness: 1.5,
                                 ),
                                 Column(
                                   children: [
-                                    Text("Pages"),
-                                    SizedBox(
+                                    const Text("Pages"),
+                                    const SizedBox(
                                       height: 2,
                                     ),
                                     Text(
                                         "${controller.detailBook!.pages!} Page"),
                                   ],
                                 ),
-                                VerticalDivider(
+                                const VerticalDivider(
                                   color: Colors.black,
                                   thickness: 1.5,
                                 ),
                                 Column(
                                   children: [
-                                    Text("Language"),
-                                    SizedBox(
+                                    const Text("Language"),
+                                    const SizedBox(
                                       height: 2,
                                     ),
-                                    Text("${controller.detailBook!.language!}"),
+                                    Text(controller.detailBook!.language!),
                                   ],
                                 ),
 
@@ -204,7 +202,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               ],
                             ),
                           ),
-                          SizedBox(height: 25),
+                          const SizedBox(height: 25),
                           Padding(
                             padding: const EdgeInsets.symmetric(
                               horizontal: 14,
@@ -213,7 +211,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               width: double.infinity,
                               child: ElevatedButton(
                                   style: ElevatedButton.styleFrom(
-                                    padding: EdgeInsets.symmetric(
+                                    padding: const EdgeInsets.symmetric(
                                       vertical: 15,
                                     ),
                                     primary: Colors.green,
@@ -228,7 +226,9 @@ class _DetailBookPageState extends State<DetailBookPage> {
                                     try {
                                       (await canLaunchUrl(uri))
                                           ? launchUrl(uri)
+                                          // ignore: avoid_print
                                           : print("tidak berhasil navigasi");
+                                      // ignore: empty_catches
                                     } catch (e) {}
                                   },
                                   child: const Text("BUY")),
