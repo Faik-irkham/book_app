@@ -50,7 +50,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                     },
                     child: Image.network(
                       controller.detailBook!.image!,
-                      height: 300,
+                      height: 260,
                     ),
                   ),
                   Expanded(
@@ -106,6 +106,9 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               ),
                             ),
                           ),
+                          const SizedBox(
+                            height: 8,
+                          ),
                           // Text(
                           //   controller.detailBook!.subtitle!,
                           //   style: const TextStyle(
@@ -114,14 +117,14 @@ class _DetailBookPageState extends State<DetailBookPage> {
                           //     color: Colors.grey,
                           //   ),
                           // ),
-                          // Text(
-                          //   controller.detailBook!.price!,
-                          //   style: const TextStyle(
-                          //     fontSize: 14,
-                          //     fontWeight: FontWeight.bold,
-                          //     color: Colors.green,
-                          //   ),
-                          // ),
+                          Text(
+                            controller.detailBook!.price!,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.green,
+                            ),
+                          ),
                           const SizedBox(
                             height: 12,
                           ),
