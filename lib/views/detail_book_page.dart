@@ -93,19 +93,19 @@ class _DetailBookPageState extends State<DetailBookPage> {
                           const SizedBox(
                             height: 8,
                           ),
-                          // Row(
-                          //   children: List.generate(
-                          //     5,
-                          //     (index) => Icon(
-                          //       Icons.star,
-                          //       color: index <
-                          //               int.parse(
-                          //                   controller.detailBook!.rating!)
-                          //           ? Colors.yellow
-                          //           : Colors.grey,
-                          //     ),
-                          //   ),
-                          // ),
+                          Row(
+                            children: List.generate(
+                              5,
+                              (index) => Icon(
+                                Icons.star,
+                                color: index <
+                                        int.parse(
+                                            controller.detailBook!.rating!)
+                                    ? Colors.yellow
+                                    : Colors.grey,
+                              ),
+                            ),
+                          ),
                           // Text(
                           //   controller.detailBook!.subtitle!,
                           //   style: const TextStyle(
