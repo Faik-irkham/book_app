@@ -7,13 +7,15 @@ class ImageViewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-          child: Stack(
-        children: [
-          Image.network(imageUrl),
-          const BackButton(),
-        ],
-      )),
+      body: Center(
+        child: SafeArea(
+            child: Stack(
+          children: [
+            Image.network(imageUrl),
+            const BackButton(),
+          ],
+        )),
+      ),
     );
   }
 }
