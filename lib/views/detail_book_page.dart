@@ -51,7 +51,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                       },
                       child: Image.network(
                         controller.detailBook!.image!,
-                        height: 260,
+                        height: 250,
                       ),
                     ),
                     Expanded(
@@ -127,12 +127,12 @@ class _DetailBookPageState extends State<DetailBookPage> {
                               ),
                             ),
                             const SizedBox(
-                              height: 12,
+                              height: 10,
                             ),
                             const Text(
                               "Description",
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w500,
                               ),
                             ),
@@ -207,7 +207,7 @@ class _DetailBookPageState extends State<DetailBookPage> {
                                 ],
                               ),
                             ),
-                            const SizedBox(height: 25),
+                            const SizedBox(height: 30),
                             Padding(
                               padding: const EdgeInsets.symmetric(
                                 horizontal: 14,
