@@ -2,7 +2,9 @@ import 'package:book_app/controllers/book_controller.dart';
 import 'package:book_app/views/detail_book_page.dart';
 // ignore: implementation_imports
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class BookListPage extends StatefulWidget {
   const BookListPage({Key? key}) : super(key: key);
